@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="Guo-8c-dyh">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="18122"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Window Controller-->
+        <scene sceneID="qNc-wE-XeA">
+            <objects>
+                <windowController id="Guo-8c-dyh" customClass="AboutWindowController" customModule="AudioSwitcher" customModuleProvider="target" sceneMemberID="viewController">
+                    <window key="window" title="About" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" restorable="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" titlebarAppearsTransparent="YES" id="r2j-Xy-ctO">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES"/>
+                        <rect key="contentRect" x="1734" y="143" width="256" height="170"/>
+                        <rect key="screenRect" x="1440" y="-180" width="1920" height="1080"/>
+                        <connections>
+                            <outlet property="delegate" destination="Guo-8c-dyh" id="5R5-dh-LHz"/>
+                        </connections>
+                    </window>
+                    <connections>
+                        <segue destination="Z7E-aX-irP" kind="relationship" relationship="window.shadowedContentViewController" id="dUJ-pL-wfY"/>
+                    </connections>
+                </windowController>
+                <customObject id="Kd3-jF-9CE" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="44" y="74"/>
+        </scene>
+        <!--About View Controller-->
+        <scene sceneID="S5J-8q-hVA">
+            <objects>
+                <viewController id="Z7E-aX-irP" customClass="AboutViewController" customModule="AudioSwitcher" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="ue9-0a-tid">
+                        <rect key="frame" x="0.0" y="0.0" width="256" height="192"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="byR-et-Jqx">
+                                <rect key="frame" x="120" y="106" width="16" height="66"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="Icon" id="mjD-3y-Gc6"/>
+                            </imageView>
+                            <stackView distribution="fill" orientation="vertical" alignment="centerX" spacing="4" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EFN-kx-sfN">
+                                <rect key="frame" x="20" y="20" width="216" height="66"/>
+                                <subviews>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="f5R-St-RFN">
+                                        <rect key="frame" x="68" y="51" width="80" height="15"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="App Name" id="5Se-kb-JnX">
+                                            <font key="font" metaFont="systemBold" size="14"/>
+                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="ZZb-iL-i2f" userLabel="Saved Times">
+                                        <rect key="frame" x="74" y="34" width="67" height="13"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Saved times" id="y8B-bh-gr2">
+                                            <font key="font" metaFont="system" size="10"/>
+                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="pcT-GQ-07L">
+                                        <rect key="frame" x="87" y="17" width="43" height="13"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="version" id="iJU-n2-wkj">
+                                            <font key="font" metaFont="system" size="10"/>
+                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="u1E-qt-kDn">
+                                        <rect key="frame" x="80" y="0.0" width="56" height="13"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Copyright" id="Lrp-Fu-1SJ">
+                                            <font key="font" metaFont="system" size="10"/>
+                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                </subviews>
+                                <visibilityPriorities>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                </visibilityPriorities>
+                                <customSpacing>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                </customSpacing>
+                            </stackView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="EFN-kx-sfN" firstAttribute="leading" secondItem="ue9-0a-tid" secondAttribute="leading" constant="20" id="4Wf-2q-c7Q"/>
+                            <constraint firstAttribute="bottom" secondItem="EFN-kx-sfN" secondAttribute="bottom" constant="20" id="FeF-HW-jyj"/>
+                            <constraint firstItem="byR-et-Jqx" firstAttribute="top" secondItem="ue9-0a-tid" secondAttribute="top" constant="20" id="RgB-48-gzW"/>
+                            <constraint firstItem="EFN-kx-sfN" firstAttribute="top" secondItem="byR-et-Jqx" secondAttribute="bottom" constant="20" id="Yns-OI-ftQ"/>
+                            <constraint firstAttribute="trailing" secondItem="EFN-kx-sfN" secondAttribute="trailing" constant="20" id="czS-5G-uzi"/>
+                            <constraint firstItem="byR-et-Jqx" firstAttribute="centerX" secondItem="ue9-0a-tid" secondAttribute="centerX" id="iAJ-2a-sZP"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="appCopyrightLabel" destination="u1E-qt-kDn" id="wie-bt-ESN"/>
+                        <outlet property="appIconImageView" destination="byR-et-Jqx" id="VQp-tT-DWr"/>
+                        <outlet property="appNameLabel" destination="f5R-St-RFN" id="NE7-Kc-YlU"/>
+                        <outlet property="appVersionLabel" destination="pcT-GQ-07L" id="lls-9V-t7T"/>
+                        <outlet property="savedTimes" destination="ZZb-iL-i2f" id="LXL-p9-7sb"/>
+                    </connections>
+                </viewController>
+                <customObject id="JoN-V3-oZo" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="44" y="406"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Icon" width="16" height="16"/>
+    </resources>
+</document>
