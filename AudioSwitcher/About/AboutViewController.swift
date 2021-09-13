@@ -24,7 +24,9 @@ class AboutViewController: NSViewController {
             appVersionLabel.stringValue = "version \(version) (\(build))"
             appCopyrightLabel.stringValue = infoDictionary["NSHumanReadableCopyright"] as? String ?? ""
         }
-        
+    }
+    
+    override func viewWillAppear() {
         let inputCount = UserDefaults.standard.integer(forKey: DefaultsKeys.inputDeviceCount.rawValue)
         let outputCount = UserDefaults.standard.integer(forKey: DefaultsKeys.outputDeviceCount.rawValue)
         savedTimes.stringValue = "Input: \(inputCount) Output: \(outputCount)"

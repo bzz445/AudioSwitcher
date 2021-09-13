@@ -29,6 +29,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
         menu.delegate = self
         statusItem.menu = menu
+        
+        audioInputDeviceDidChange()
+        audioOutputDeviceDidChange()
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {
