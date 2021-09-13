@@ -10,16 +10,41 @@
 		469FF75026EB24B500EF99AB /* AboutWindow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 469FF74D26EB24B500EF99AB /* AboutWindow.storyboard */; };
 		469FF75126EB24B500EF99AB /* AboutWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469FF74E26EB24B500EF99AB /* AboutWindowController.swift */; };
 		469FF75226EB24B500EF99AB /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469FF74F26EB24B500EF99AB /* AboutViewController.swift */; };
+		469FF79226EF501C00EF99AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469FF79126EF501C00EF99AB /* AppDelegate.swift */; };
+		469FF79626EF501E00EF99AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 469FF79526EF501E00EF99AB /* Assets.xcassets */; };
+		469FF79926EF501E00EF99AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 469FF79726EF501E00EF99AB /* Main.storyboard */; };
+		469FF7A026EF50F800EF99AB /* Launcher.app in CopyFiles */ = {isa = PBXBuildFile; fileRef = 469FF78F26EF501C00EF99AB /* Launcher.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		469FF7A326EF512700EF99AB /* ServiceManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 469FF7A226EF512700EF99AB /* ServiceManagement.framework */; };
 		46FFCB3B26E6133200734EAB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46FFCB3A26E6133200734EAB /* AppDelegate.swift */; };
 		46FFCB3F26E6133400734EAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46FFCB3E26E6133400734EAB /* Assets.xcassets */; };
 		46FFCB4226E6133400734EAB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46FFCB4026E6133400734EAB /* Main.storyboard */; };
 		46FFCB4B26E61BC800734EAB /* AudioService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46FFCB4A26E61BC800734EAB /* AudioService.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		469FF79F26EF50DF00EF99AB /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = Contents/Library/LoginItems;
+			dstSubfolderSpec = 1;
+			files = (
+				469FF7A026EF50F800EF99AB /* Launcher.app in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		469FF74D26EB24B500EF99AB /* AboutWindow.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AboutWindow.storyboard; sourceTree = "<group>"; };
 		469FF74E26EB24B500EF99AB /* AboutWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutWindowController.swift; sourceTree = "<group>"; };
 		469FF74F26EB24B500EF99AB /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		469FF78F26EF501C00EF99AB /* Launcher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Launcher.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		469FF79126EF501C00EF99AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		469FF79526EF501E00EF99AB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		469FF79826EF501E00EF99AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		469FF79A26EF501E00EF99AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		469FF79B26EF501E00EF99AB /* Launcher.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Launcher.entitlements; sourceTree = "<group>"; };
+		469FF7A226EF512700EF99AB /* ServiceManagement.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ServiceManagement.framework; path = System/Library/Frameworks/ServiceManagement.framework; sourceTree = SDKROOT; };
 		46FFCB3726E6133200734EAB /* AudioSwitcher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AudioSwitcher.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		46FFCB3A26E6133200734EAB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		46FFCB3E26E6133400734EAB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -29,10 +54,18 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		469FF78C26EF501C00EF99AB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		46FFCB3426E6133200734EAB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				469FF7A326EF512700EF99AB /* ServiceManagement.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -49,11 +82,33 @@
 			path = About;
 			sourceTree = "<group>";
 		};
+		469FF79026EF501C00EF99AB /* Launcher */ = {
+			isa = PBXGroup;
+			children = (
+				469FF79126EF501C00EF99AB /* AppDelegate.swift */,
+				469FF79526EF501E00EF99AB /* Assets.xcassets */,
+				469FF79726EF501E00EF99AB /* Main.storyboard */,
+				469FF79A26EF501E00EF99AB /* Info.plist */,
+				469FF79B26EF501E00EF99AB /* Launcher.entitlements */,
+			);
+			path = Launcher;
+			sourceTree = "<group>";
+		};
+		469FF7A126EF512700EF99AB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				469FF7A226EF512700EF99AB /* ServiceManagement.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		46FFCB2E26E6133200734EAB = {
 			isa = PBXGroup;
 			children = (
 				46FFCB3926E6133200734EAB /* AudioSwitcher */,
+				469FF79026EF501C00EF99AB /* Launcher */,
 				46FFCB3826E6133200734EAB /* Products */,
+				469FF7A126EF512700EF99AB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -61,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				46FFCB3726E6133200734EAB /* AudioSwitcher.app */,
+				469FF78F26EF501C00EF99AB /* Launcher.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -81,6 +137,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		469FF78E26EF501C00EF99AB /* Launcher */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 469FF79C26EF501E00EF99AB /* Build configuration list for PBXNativeTarget "Launcher" */;
+			buildPhases = (
+				469FF78B26EF501C00EF99AB /* Sources */,
+				469FF78C26EF501C00EF99AB /* Frameworks */,
+				469FF78D26EF501C00EF99AB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Launcher;
+			productName = Launcher;
+			productReference = 469FF78F26EF501C00EF99AB /* Launcher.app */;
+			productType = "com.apple.product-type.application";
+		};
 		46FFCB3626E6133200734EAB /* AudioSwitcher */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 46FFCB4726E6133400734EAB /* Build configuration list for PBXNativeTarget "AudioSwitcher" */;
@@ -88,6 +161,7 @@
 				46FFCB3326E6133200734EAB /* Sources */,
 				46FFCB3426E6133200734EAB /* Frameworks */,
 				46FFCB3526E6133200734EAB /* Resources */,
+				469FF79F26EF50DF00EF99AB /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -107,6 +181,9 @@
 				LastSwiftUpdateCheck = 1250;
 				LastUpgradeCheck = 1250;
 				TargetAttributes = {
+					469FF78E26EF501C00EF99AB = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
 					46FFCB3626E6133200734EAB = {
 						CreatedOnToolsVersion = 12.5.1;
 					};
@@ -126,11 +203,21 @@
 			projectRoot = "";
 			targets = (
 				46FFCB3626E6133200734EAB /* AudioSwitcher */,
+				469FF78E26EF501C00EF99AB /* Launcher */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		469FF78D26EF501C00EF99AB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				469FF79626EF501E00EF99AB /* Assets.xcassets in Resources */,
+				469FF79926EF501E00EF99AB /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		46FFCB3526E6133200734EAB /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -144,6 +231,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		469FF78B26EF501C00EF99AB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				469FF79226EF501C00EF99AB /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		46FFCB3326E6133200734EAB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -158,6 +253,14 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		469FF79726EF501E00EF99AB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				469FF79826EF501E00EF99AB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
 		46FFCB4026E6133400734EAB /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -169,6 +272,52 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		469FF79D26EF501E00EF99AB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Launcher/Launcher.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 5QVVNKS755;
+				ENABLE_HARDENED_RUNTIME = NO;
+				INFOPLIST_FILE = Launcher/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = com.b333i.Launcher;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		469FF79E26EF501E00EF99AB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Launcher/Launcher.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 5QVVNKS755;
+				ENABLE_HARDENED_RUNTIME = NO;
+				INFOPLIST_FILE = Launcher/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = com.b333i.Launcher;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 		46FFCB4526E6133400734EAB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -220,7 +369,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 11.3;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -275,7 +424,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 11.3;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
@@ -327,6 +476,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		469FF79C26EF501E00EF99AB /* Build configuration list for PBXNativeTarget "Launcher" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				469FF79D26EF501E00EF99AB /* Debug */,
+				469FF79E26EF501E00EF99AB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		46FFCB3226E6133200734EAB /* Build configuration list for PBXProject "AudioSwitcher" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

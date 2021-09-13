@@ -7,8 +7,10 @@
 
 import Cocoa
 import CoreAudio
+import ServiceManagement
 
 enum DefaultsKeys: String {
+    case startOnLogin = "StartOnLogin"
     case inputDeviceID = "InputDeviceID"
     case inputDeviceCount = "InputDeviceCount"
     case outputDeviceID = "OutputDeviceID"
@@ -17,10 +19,20 @@ enum DefaultsKeys: String {
 
 @main
 class AppDelegate: NSObject, NSApplicationDelegate {
+    private let launcherAppId = "com.b333i.Launcher"
     private let statusItem = NSStatusBar.system.statusItem(withLength:NSStatusItem.squareLength)
     private let menu = NSMenu()
     
     func applicationDidFinishLaunching(_ aNotification: Notification) {
+        let runningApps = NSWorkspace.shared.runningApplications
+        let isRunning = !runningApps.filter { $0.bundleIdentifier == launcherAppId }.isEmpty
+
+        SMLoginItemSetEnabled(launcherAppId as CFString, true)
+
+        if isRunning {
+            DistributedNotificationCenter.default().post(name: Notification.Name("killLauncher"), object: Bundle.main.bundleIdentifier!)
+        }
+        
         AudioService.shared.start()
         NotificationCenter.default.addObserver(self, selector: #selector(audioInputDeviceDidChange), name: Notification.Name("AudioInputDeviceDidChange"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(audioOutputDeviceDidChange), name: Notification.Name("AudioOutputDeviceDidChange"), object: nil)
@@ -92,9 +104,20 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
         
         menu.addItem(NSMenuItem.separator())
+        let startOnLoad = NSMenuItem(title: "Start On Login", action: #selector(toggleStartOnLoad), keyEquivalent: "")
+        startOnLoad.state = UserDefaults.standard.bool(forKey: DefaultsKeys.startOnLogin.rawValue) ? .on : .off
+        menu.addItem(startOnLoad)
         menu.addItem(NSMenuItem(title: "About", action: #selector(about), keyEquivalent: ""))
         menu.addItem(NSMenuItem(title: "Quit", action: #selector(NSApplication.terminate(_:)), keyEquivalent: "q"))
         menu.update()
+    }
+    
+    @objc
+    private func toggleStartOnLoad() {
+        let startOnLogin = UserDefaults.standard.bool(forKey: DefaultsKeys.startOnLogin.rawValue)
+        UserDefaults.standard.setValue(!startOnLogin, forKey: DefaultsKeys.startOnLogin.rawValue)
+        SMLoginItemSetEnabled(launcherAppId as CFString, !startOnLogin)
+        constructMenu()
     }
     
     @objc
